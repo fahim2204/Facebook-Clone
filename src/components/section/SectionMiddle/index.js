@@ -1,6 +1,7 @@
 import Story from './story'
 import CreatePost from './CreatePost'
 import CreateRoom from './CreateRoom'
+import Posts from './Posts'
 
 
 const SectionMiddle = () => {
@@ -15,6 +16,9 @@ const SectionMiddle = () => {
                 </div>
                 <div className="col-12 px-5">
                     <CreateRoom />
+                </div>
+                <div className="col-12 px-5">
+                    <Posts />
                 </div>
             </div>
         </>

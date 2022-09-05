@@ -4,8 +4,8 @@ import Body from "./components/Body"
 const App = () => {
   return (
     <>
-    <Header/>
-    <Body/>
+      <Header />
+      <Body />
     </>
   )
 }
