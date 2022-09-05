@@ -1,0 +1,14 @@
+.btn-right-rounded {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.2rem;
+}
+
+.btn-right-rounded:hover {
+    background-color: aliceblue;
+}
