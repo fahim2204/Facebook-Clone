@@ -1,0 +1,15 @@
+.user-online {
+    position: relative;
+}
+
+.user-online::after {
+    position: absolute;
+    content: "";
+    bottom: 7px;
+    right: 7px;
+    height: 13px;
+    width: 13px;
+    border: 2px solid #faf2fa;
+    border-radius: 50%;
+    background-color: rgb(9, 179, 9);
+}
