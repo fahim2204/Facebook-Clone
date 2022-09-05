@@ -1,21 +1,15 @@
-.user-online {
+.user-online-right {
     position: relative;
 }
 
-.user-online::after {
+.user-online-right::after {
     position: absolute;
     content: "";
     bottom: 7px;
     right: 7px;
-    height: 13px;
-    width: 13px;
+    height: 10px;
+    width: 10px;
     border: 2px solid #faf2fa;
     border-radius: 50%;
     background-color: rgb(9, 179, 9);
-}
-
-.like-com-hover:hover {
-    cursor: pointer;
-    background-color: #f2f2f2;
-    border-radius: 0.22rem;
 }

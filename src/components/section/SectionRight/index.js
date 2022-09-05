@@ -1,3 +1,4 @@
+import './SectionRight.css'
 const SectionRight = () => {
     const onlineUserList = [
         {
@@ -96,7 +97,7 @@ const SectionRight = () => {
                 {onlineUserList.map((item, index) => {
                     return (
                         <div key={index} className="d-flex align-items-center">
-                            <img height="28" width="28" alt="profile" className="rounded-circle m-2" src={item.userImg} />
+                            <div className='user-online-right'><img height="28" width="28" alt="profile" className="rounded-circle m-2" src={item.userImg} /></div>
                             <span className="fw-semibold">{item.userName}</span>
                         </div>
                     )
