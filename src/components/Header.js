@@ -5,7 +5,7 @@ import NavRight from "./Nav/NavRight"
 const Header = () => {
     return (
         <>
-            <nav className="container-fluid shadow-sm fixed-top">
+            <nav className="container-fluid bg-white shadow-sm fixed-top">
                 <div className="row d-flex justify-content-evenly ">
                     <div className="col-3"> <NavLeft /></div>
                     <div className="col-6"><NavMiddle /></div>
