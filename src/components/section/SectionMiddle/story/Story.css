@@ -1,0 +1,50 @@
+.story-box {
+    height: 200px;
+    width: 112px;
+}
+
+.create-story-sec {
+    height: 50px;
+    width: 112px;
+    position: relative;
+}
+
+.create-story-sec::before {
+    content: "+";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    top: -14px;
+    background-color: #166ada;
+    color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: 3px solid #f8f9fa;
+}
+
+.all-story-btn {
+    position: relative;
+}
+
+.all-story-btn::after {
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.247);
+    position: absolute;
+    right: -10px;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    content: "→";
+    font-size: 20px;
+    text-align: center;
+    line-height: 5px;
+    height: 40px;
+    width: 40px;
+}
