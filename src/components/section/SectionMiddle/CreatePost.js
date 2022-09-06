@@ -1,4 +1,3 @@
-import Posts from "./Posts"
 import { userDummyApi } from "../../../api/userPosts"
 import { useState } from "react"
 
@@ -22,8 +21,7 @@ const CreatePost = (props) => {
             "shares": 0,
         }
         props.setDummyApi(old => [newPost, ...old])
-        //   console.log("post>>",props.dummyApi);
-        // props.setDummyApi(...props.dummyApi,[...Posts,newPost])
+        setPostText("")
     }
     return (
         <>

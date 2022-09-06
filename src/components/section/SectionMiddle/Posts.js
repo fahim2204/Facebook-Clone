@@ -1,9 +1,10 @@
 import './SectionMiddle.css'
 import Comments from './Comments'
 import { userDummyApi } from '../../../api/userPosts'
-import { useEffect, useState } from 'react'
+import {useState } from 'react'
 
 const Posts = (props) => {
+    const [commentText, setCommentText] = useState("")
 
     const timeDifference = (current, previous) => {
         var msPerMinute = 60 * 1000;
@@ -39,16 +40,36 @@ const Posts = (props) => {
         }
     }
 
-
-
     const handleLike = (post) => {
-        const temp = props.dummyApi.map((item)=>{
-            if(item.id===post.id){
-                return {...item,liked:!post.liked}
+        const temp = props.dummyApi.map((item) => {
+            if (item.id === post.id) {
+                return { ...item, liked: !post.liked }
             }
             else return item;
         })
         props.setDummyApi(temp)
+    }
+    const handleNewCommentInput = (e) => {
+        setCommentText(e.target.value)
+    }
+    const handleCreateNewComment = (post) => {
+        const newComment = {
+            "text": commentText,
+            "created_at": Date.now(),
+            "user": {
+              "username": userDummyApi.user.username,
+              "name": userDummyApi.user.name,
+              "profile_picture": userDummyApi.user.profile_picture
+            }
+          }
+          const temp = props.dummyApi.map((item) => {
+            if (item.id === post.id) {
+                return { ...item, comments: post.comments?[newComment,...item.comments]:[newComment] }
+            }
+            else return item;
+        })
+        props.setDummyApi(temp)
+        setCommentText("")
     }
 
     return (
@@ -77,7 +98,7 @@ const Posts = (props) => {
                             <div className="text-muted user-select-none">{post.likes}</div>
                         </div>
                         <div className="me-2">
-                            <span className="text-muted mx-2 user-select-none">{post.comments?post.comments.length:"0"} Comments</span>
+                            <span className="text-muted mx-2 user-select-none">{post.comments ? post.comments.length : "0"} Comments</span>
                             <span className="text-muted user-select-none">{post.shares} Share</span>
                         </div>
 
@@ -109,7 +130,8 @@ const Posts = (props) => {
                     <div className="col-12 d-flex align-items-center px-4">
                         <div className='user-online-1'><img height="32" width="32" alt="profile" className="rounded-circle m-2" src={userDummyApi.user.profile_picture} /></div>
                         <div className='w-100 position-relative'>
-                            <input type="text" className="form-control rounded-5 bg-light py-1" name="search" id="search" placeholder="Write a public comment..." />
+                            <input type="text" className="form-control rounded-5 bg-light py-1" name="search" id="search" onChange={handleNewCommentInput} onKeyDown={(e) =>
+                        e.key === "Enter" ? handleCreateNewComment(post) : null} value={commentText} placeholder="Write a public comment..." />
                             <div className="position-absolute top-50 end-0 translate-middle-y me-3 d-flex justify-content-center">
                                 <span className='p-2 round-hover d-flex justify-content-center align-items-center'><img height="16" width="16" alt="emoj" src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/1c1e21/external-Smile-emoticons-those-icons-lineal-those-icons-2.png" /></span>
                                 <span className='p-2 round-hover d-flex justify-content-center align-items-center'><img height="16" width="16" alt="emoj" src="https://img.icons8.com/ios/50/1c1e21/camera--v1.png" /></span>
