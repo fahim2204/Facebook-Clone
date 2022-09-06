@@ -29,3 +29,28 @@
 .line-height-1 {
     line-height: 12px;
 }
+
+.scroll-room {
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.scroll-room::-webkit-scrollbar {
+    height: 0;
+}
+
+.cr-post-svg {
+    height: 24px;
+    width: 24px;
+}
+
+@media (max-width: 910px) {
+    .cr-post-svg {
+        height: 18px;
+        width: 18px;
+    }
+    .cr-font {
+        font-size: .87rem;
+    }
+}

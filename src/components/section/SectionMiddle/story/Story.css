@@ -1,6 +1,13 @@
 .story-box {
     height: 200px;
     width: 112px;
+    background-size: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.story-box:hover {
+    background-size: 105%;
+    opacity: 0.7;
 }
 
 .create-story-sec {
@@ -47,4 +54,14 @@
     line-height: 5px;
     height: 40px;
     width: 40px;
+}
+
+.scroll-story {
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.scroll-story::-webkit-scrollbar {
+    height: 0;
 }

@@ -76,7 +76,7 @@ const Posts = (props) => {
         <>
             {props.dummyApi.map((post, index) => {
                 return (<div key={index} className="row mx-1 mx-md-2 mx-lg-3 mx-xl-4 mt-3 bg-white rounded rounded-3">
-                    <div className="col-12 d-flex justify-content-between align-items-center">
+                    <div className="col-12 d-flex justify-content-between align-items-center mt-1">
                         <div className="d-flex">
                             <img className="rounded-circle m-2 shadow-sm" alt="profile" height="40px" width="40px" src={post.user.profile_picture} />
                             <span className='mt-1'>
@@ -131,7 +131,7 @@ const Posts = (props) => {
                         <div className='user-online-1'><img height="32" width="32" alt="profile" className="rounded-circle m-2" src={userDummyApi.user.profile_picture} /></div>
                         <div className='w-100 position-relative'>
                             <input type="text" className="form-control rounded-5 bg-light py-1" name="search" id="search" onChange={handleNewCommentInput} onKeyDown={(e) =>
-                        e.key === "Enter" ? handleCreateNewComment(post) : null} value={commentText} placeholder="Write a public comment..." />
+                        e.key === "Enter" ? handleCreateNewComment(post) : null} value={commentText} autoComplete="off" placeholder="Write a public comment..." />
                             <div className="position-absolute top-50 end-0 translate-middle-y me-3 d-flex justify-content-center">
                                 <span className='p-2 round-hover d-flex justify-content-center align-items-center'><img height="16" width="16" alt="emoj" src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/1c1e21/external-Smile-emoticons-those-icons-lineal-those-icons-2.png" /></span>
                                 <span className='p-2 round-hover d-flex justify-content-center align-items-center'><img height="16" width="16" alt="emoj" src="https://img.icons8.com/ios/50/1c1e21/camera--v1.png" /></span>

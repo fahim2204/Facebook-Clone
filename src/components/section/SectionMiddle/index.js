@@ -12,7 +12,7 @@ const SectionMiddle = () => {
     return (
         <>
             <div className="row d-flex justify-content-center mt-4">
-                <div className="col-12">
+                <div className="col-12 px-1 px-md-2 px-lg-3 px-xl-4 px-xxl-5">
                     <Story />
                 </div>
                 <div className="col-12 px-1 px-md-2 px-lg-3 px-xl-4 px-xxl-5">

@@ -3,21 +3,23 @@ import './SectionMiddle.css'
 const CreateRoom = () => {
     return (
         <>
-            <div className="row mx-1 mx-md-2 mx-lg-3 mx-xl-4 mt-3 bg-white rounded rounded-3">
-                <div className="col-12 d-flex">
-                    <button className="btn btn-white border-primary rounded-5 d-flex justify-content-center align-items-center my-2">
+            <div className="row mx-1 mx-md-2 mx-lg-3 mx-xl-4 mt-3 bg-white rounded rounded-3 pe-3">
+                <div className="col-12 d-flex align-items-center scroll-room">
+                    <div className="btn btn-white border-primary rounded-5 d-flex justify-content-center align-items-center my-2 flex-shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="purple" height="24" width="24" viewBox="0 0 16 16"><g fillRule="evenodd" transform="translate(-448 -544)"><path d="M457.25 552.5H455v2.25a.75.75 0 0 1-1.5 0v-2.25h-2.25a.75.75 0 0 1 0-1.5h2.25v-2.25a.75.75 0 0 1 1.5 0V551h2.25a.75.75 0 0 1 0 1.5m6.38-4.435a.62.62 0 0 0-.64.047l-2.49 1.634v-1.394a1.854 1.854 0 0 0-1.852-1.852l-8.796.002a1.854 1.854 0 0 0-1.851 1.852v6.793c0 1.021.83 1.852 1.852 1.852l1.147-.002h7.648a1.854 1.854 0 0 0 1.852-1.851v-1.392l2.457 1.61a.641.641 0 0 0 .673.071.663.663 0 0 0 .37-.601v-6.167c0-.26-.142-.49-.37-.602"></path></g></svg>
                         <span className="text-primary ms-2 fw-semibold">Create Room</span>
-                    </button>
+                    </div>
 
-                    <div className='user-online-2'><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=10`}/></div>
+                    <div className='user-online-2'><img className="rounded-circle my-2 me-1 ms-2 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=10`}/></div>
                     <div className='user-online-2'><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=11`}/></div>
                     <div className=''><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=12`}/></div>
                     <div className='user-online-2'><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=13`}/></div>
                     <div className='user-online-2'><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=14`}/></div>
                     <div className=''><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=15`}/></div>
-                    <div className='user-online-2'><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=34`}/></div>
-
+                    <div className='user-online-2'><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=41`}/></div>
+                    <div className=''><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=42`}/></div>
+                    <div className='user-online-2'><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=43`}/></div>
+                    <div className='user-online-2'><img className="rounded-circle my-2 mx-1 mx-xl-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=44`}/></div>
                 </div>
 
             </div>
