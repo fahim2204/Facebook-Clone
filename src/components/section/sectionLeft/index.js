@@ -1,10 +1,7 @@
+import { userDummyApi } from "../../../api/userPosts"
+
 const SectionLeft = () => {
     const menuItem = [
-        {
-            imgSrc: "https://scontent.fdac135-1.fna.fbcdn.net/v/t1.6435-1/100670822_363325067979607_4059718317856784384_n.jpg?stp=cp0_dst-jpg_p40x40&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeGToiOu1kfi3ZKpyV6cfJ3isdnxKQRs79Ox2fEpBGzv04QIk6VHUP7b-C4kZ6BiT5sq34icMFG4EKjHs6vdROCh&_nc_ohc=HvBfLmNIPSEAX__NpWc&_nc_ht=scontent.fdac135-1.fna&oh=00_AT8lPrI_Z49qaym7IIG9WT41F_7BaiaKHwjqxecIUqTGcA&oe=633C70D4",
-            menuText: "Fahim Faisal",
-            menuLink: "#"
-        },
         {
             imgSrc: "https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/tSXYIzZlfrS.png?_nc_eui2=AeGSY8zFn9aoixOqKkGRoi6EY2wdbxH-OX5jbB1vEf45fsKsOh3O84FSYM5bgBK6Fini_zAebEqgW8XuU3_oTW_6",
             menuText: "Friends",
@@ -84,6 +81,10 @@ const SectionLeft = () => {
     return (
         <>
             <div className="d-flex flex-column justify-content-start mt-3">
+                <div className="d-flex align-items-center">
+                    <img height="28" width="28" alt="profile" className="rounded-circle m-2" src={userDummyApi.user.profile_picture} />
+                    <span className="fw-semibold">{userDummyApi.user.name}</span>
+                </div>
                 {menuItem.map((item, index) => {
                     return (
                         <div key={index} className="d-flex align-items-center">

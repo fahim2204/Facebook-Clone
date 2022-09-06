@@ -97,7 +97,7 @@ const SectionRight = () => {
                 {onlineUserList.map((item, index) => {
                     return (
                         <div key={index} className="d-flex align-items-center">
-                            <div className='user-online-right'><img height="28" width="28" alt="profile" className="rounded-circle m-2" src={item.userImg} /></div>
+                            <div className='user-online-1'><img height="28" width="28" alt="profile" className="rounded-circle m-2" src={item.userImg} /></div>
                             <span className="fw-semibold">{item.userName}</span>
                         </div>
                     )

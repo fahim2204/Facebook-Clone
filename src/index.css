@@ -9,11 +9,11 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.user-online {
+.user-online-2 {
     position: relative;
 }
 
-.user-online::after {
+.user-online-2::after {
     position: absolute;
     content: "";
     bottom: 7px;

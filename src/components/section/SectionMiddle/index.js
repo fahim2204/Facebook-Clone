@@ -11,13 +11,14 @@ const SectionMiddle = () => {
                 <div className="col-12">
                     <Story />
                 </div>
-                <div className="col-12 px-5">
+                <div className="col-12 px-1 px-md-2 px-lg-3 px-xl-4 px-xxl-5">
                     <CreatePost />
                 </div>
-                <div className="col-12 px-5">
+                <div className="col-12 px-1 px-md-2 px-lg-3 px-xl-4 px-xxl-5">
                     <CreateRoom />
                 </div>
-                <div className="col-12 px-5">
+                <div className="col-12 px-1 px-md-2 px-lg-3 px-xl-4 px-xxl-5">
+                    <Posts />
                     <Posts />
                 </div>
             </div>

@@ -1,8 +1,10 @@
 import './SectionMiddle.css'
+import Comments from './Comments'
+
 const Posts = () => {
     return (
         <>
-            <div className="row mx-4 mt-3 bg-white rounded rounded-3">
+            <div className="row mx-1 mx-md-2 mx-lg-3 mx-xl-4 mt-3 bg-white rounded rounded-3">
                 <div className="col-12 d-flex justify-content-between align-items-center">
                     <div className="d-flex">
                         <img className="rounded-circle m-2 shadow-sm" alt="profile" height="40px" width="40px" src={`https://source.unsplash.com/random/70?sig=11`} />
@@ -42,7 +44,7 @@ const Posts = () => {
                         </div>
                         <div className="col-4 text-muted fw-semibold">
                             <div className='d-flex justify-content-center align-items-center w-100 like-com-hover mx-1 py-1'>
-                                <img height="18" width="18" alt="comment" src="https://img.icons8.com/small/32/000000/topic--v1.png" />
+                                <img height="18" width="18" alt="comment" src="https://img.icons8.com/small/32/1c1e21/topic--v1.png" />
                                 <span className='ms-1'>Comment</span>
                             </div>
                         </div>
@@ -55,7 +57,20 @@ const Posts = () => {
                     </div>
                 </div>
                 <div className="col-12 px-3"> <hr className="text-muted p-0 m-1" /></div>
-
+                <div className="col-12 d-flex align-items-center px-4">
+                    <div className='user-online-1'><img height="32" width="32" alt="profile" className="rounded-circle m-2" src="https://scontent.fdac135-1.fna.fbcdn.net/v/t1.6435-1/100670822_363325067979607_4059718317856784384_n.jpg?stp=cp0_dst-jpg_p40x40&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeGToiOu1kfi3ZKpyV6cfJ3isdnxKQRs79Ox2fEpBGzv04QIk6VHUP7b-C4kZ6BiT5sq34icMFG4EKjHs6vdROCh&_nc_ohc=HvBfLmNIPSEAX__NpWc&_nc_ht=scontent.fdac135-1.fna&oh=00_AT8lPrI_Z49qaym7IIG9WT41F_7BaiaKHwjqxecIUqTGcA&oe=633C70D4" /></div>
+                    <div className='w-100 position-relative'>
+                        <input type="text" className="form-control rounded-5 bg-light py-1" name="search" id="search" placeholder="Write a public comment..." />
+                        <div className="position-absolute top-50 end-0 translate-middle-y me-3 d-flex justify-content-center">
+                            <span className='p-2 round-hover d-flex justify-content-center align-items-center'><img height="16" width="16" alt="emoj" src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/1c1e21/external-Smile-emoticons-those-icons-lineal-those-icons-2.png" /></span>
+                            <span className='p-2 round-hover d-flex justify-content-center align-items-center'><img height="16" width="16" alt="emoj" src="https://img.icons8.com/ios/50/1c1e21/camera--v1.png" /></span>
+                            <span className='p-2 round-hover d-flex justify-content-center align-items-center'><img height="16" width="16" alt="emoj" src="https://img.icons8.com/ios/50/1c1e21/gif--v1.png" /></span>
+                        </div>
+                    </div>
+                </div>
+                <Comments />
+                <Comments />
+                <Comments />
             </div>
         </>
     )

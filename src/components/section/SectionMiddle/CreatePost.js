@@ -1,8 +1,8 @@
 const CreatePost = () => {
     return (
         <>
-            <div className="row mx-4 mt-4 bg-white rounded rounded-3">
-                <div className="col-12 d-flex">
+            <div className="row mx-1 mx-md-2 mx-lg-3 mx-xl-4 mt-4 bg-white rounded rounded-3">
+                <div className="col-12 d-flex pt-1">
                     <img height="40" width="40" alt="profile" className="rounded-circle m-2" src="https://scontent.fdac135-1.fna.fbcdn.net/v/t1.6435-1/100670822_363325067979607_4059718317856784384_n.jpg?stp=cp0_dst-jpg_p40x40&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeGToiOu1kfi3ZKpyV6cfJ3isdnxKQRs79Ox2fEpBGzv04QIk6VHUP7b-C4kZ6BiT5sq34icMFG4EKjHs6vdROCh&_nc_ohc=HvBfLmNIPSEAX__NpWc&_nc_ht=scontent.fdac135-1.fna&oh=00_AT8lPrI_Z49qaym7IIG9WT41F_7BaiaKHwjqxecIUqTGcA&oe=633C70D4" />
                     <input type="text" className=" m-2 ps-3 form-control rounded-5 bg-light" name="search" id="search" placeholder="What's on your mind, Fahim?" />
                 </div>
