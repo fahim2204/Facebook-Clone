@@ -25,3 +25,7 @@
     background-color: #f2f2f2;
     border-radius: 50%;
 }
+
+.line-height-1 {
+    line-height: 12px;
+}
