@@ -28,7 +28,7 @@ const CreatePost = (props) => {
         <>
             <div className="row mx-1 mx-md-2 mx-lg-3 mx-xl-4 mt-4 bg-white rounded rounded-3">
                 <div className="col-12 d-flex pt-1">
-                    <img height="40" width="40" alt="profile" className="rounded-circle m-2" src={userDummyApi.user.profile_picture} />
+                    <img height="40" width="40" alt="profile" className="rounded-circle m-2 flex-shrink-0" src={userDummyApi.user.profile_picture} />
                     <input type="text" className=" m-2 ps-3 form-control rounded-5 bg-light" name="search" id="search" onChange={handleNewPostInput} onKeyDown={(e) =>
                         e.key === "Enter" ? handleCreateNewPost() : null} value={postText} placeholder="What's on your mind, Fahim?" />
                 </div>

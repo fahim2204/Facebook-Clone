@@ -1,7 +1,7 @@
 import './SectionMiddle.css'
 import Comments from './Comments'
 import { userDummyApi } from '../../../api/userPosts'
-import {useState } from 'react'
+import { useState } from 'react'
 
 const Posts = (props) => {
     const [commentText, setCommentText] = useState("")
@@ -57,19 +57,28 @@ const Posts = (props) => {
             "text": commentText,
             "created_at": Date.now(),
             "user": {
-              "username": userDummyApi.user.username,
-              "name": userDummyApi.user.name,
-              "profile_picture": userDummyApi.user.profile_picture
+                "username": userDummyApi.user.username,
+                "name": userDummyApi.user.name,
+                "profile_picture": userDummyApi.user.profile_picture
             }
-          }
-          const temp = props.dummyApi.map((item) => {
+        }
+        const temp = props.dummyApi.map((item) => {
             if (item.id === post.id) {
-                return { ...item, comments: post.comments?[newComment,...item.comments]:[newComment] }
+                return { ...item, comments: post.comments ? [newComment, ...item.comments] : [newComment] }
             }
             else return item;
         })
         props.setDummyApi(temp)
         setCommentText("")
+    }
+    const handleShareCopy = (post)=>{
+        const temp = props.dummyApi.map((item) => {
+            if (item.id === post.id) {
+                return { ...item, shares: post.shares+1 }
+            }
+            else return item;
+        })
+        props.setDummyApi(temp)
     }
 
     return (
@@ -118,10 +127,37 @@ const Posts = (props) => {
                                     <span className='ms-1 user-select-none'>Comment</span>
                                 </div>
                             </div>
-                            <div className="col-4 text-muted fw-semibold">
-                                <div className='d-flex justify-content-center align-items-center w-100 like-com-hover mx-1 py-1 me-2'>
+                            <div className="col-4 text-muted fw-semibold dropdown">
+                                <div className='d-flex justify-content-center align-items-center w-100 like-com-hover mx-1 py-1 me-2' id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img height="18" width="18" alt="share" src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/96/1c1e21/external-share-basic-user-interface-anggara-basic-outline-anggara-putra-2.png" />
                                     <span className='ms-1 user-select-none'>Share</span>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li>
+                                            <div className='dropdown-item' onClick={()=>handleShareCopy(post)}>
+                                                <img height="22" width="22" alt="icon" src="https://img.icons8.com/ios/50/000000/facebook-messenger--v1.png" />
+                                                <span class="ms-2 user-select-none">Send in Messenger</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className='dropdown-item' onClick={()=>handleShareCopy(post)}>
+                                                <img height="22" width="22" alt="icon" src="https://img.icons8.com/material-outlined/48/000000/whatsapp--v1.png" />
+                                                <span class="ms-2 user-select-none">Send in Whatsapp</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className='dropdown-item' onClick={()=>handleShareCopy(post)}>
+                                                <img height="22" width="22" alt="icon" src="https://img.icons8.com/sf-regular/48/000000/group-foreground-selected.png" />
+                                                <span class="ms-2 user-select-none">Share to a group</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className='dropdown-item' onClick={()=>handleShareCopy(post)}>
+                                                <img height="22" width="22" alt="icon" src="https://img.icons8.com/windows/32/000000/copy.png" />
+                                                <span class="ms-2 user-select-none">Copy Link</span>
+                                            </div>
+                                        </li>
+                                       
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +167,7 @@ const Posts = (props) => {
                         <div className='user-online-1'><img height="32" width="32" alt="profile" className="rounded-circle m-2" src={userDummyApi.user.profile_picture} /></div>
                         <div className='w-100 position-relative'>
                             <input type="text" className="form-control rounded-5 bg-light py-1" name="search" id="search" onChange={handleNewCommentInput} onKeyDown={(e) =>
-                        e.key === "Enter" ? handleCreateNewComment(post) : null} value={commentText} autoComplete="off" placeholder="Write a public comment..." />
+                                e.key === "Enter" ? handleCreateNewComment(post) : null} value={commentText} autoComplete="off" placeholder="Write a public comment..." />
                             <div className="position-absolute top-50 end-0 translate-middle-y me-3 d-flex justify-content-center">
                                 <span className='p-2 round-hover d-flex justify-content-center align-items-center'><img height="16" width="16" alt="emoj" src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/1c1e21/external-Smile-emoticons-those-icons-lineal-those-icons-2.png" /></span>
                                 <span className='p-2 round-hover d-flex justify-content-center align-items-center'><img height="16" width="16" alt="emoj" src="https://img.icons8.com/ios/50/1c1e21/camera--v1.png" /></span>
