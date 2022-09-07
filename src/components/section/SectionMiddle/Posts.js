@@ -43,12 +43,17 @@ const Posts = (props) => {
     const handleLike = (post) => {
         const temp = props.dummyApi.map((item) => {
             if (item.id === post.id) {
-                return { ...item, liked: !post.liked }
+                if(post.liked){
+                    return { ...item, liked: !post.liked, likes: post.likes-1 }
+                }else{
+                    return { ...item, liked: !post.liked, likes: post.likes+1 }
+                }
             }
             else return item;
         })
         props.setDummyApi(temp)
     }
+
     const handleNewCommentInput = (e) => {
         setCommentText(e.target.value)
     }
@@ -71,6 +76,7 @@ const Posts = (props) => {
         props.setDummyApi(temp)
         setCommentText("")
     }
+    
     const handleShareCopy = (post)=>{
         const temp = props.dummyApi.map((item) => {
             if (item.id === post.id) {

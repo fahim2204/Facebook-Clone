@@ -12,3 +12,8 @@
 .btn-right-rounded:hover {
     background-color: aliceblue;
 }
+
+.menu-item-hover:hover,
+.active {
+    border-bottom: 3px solid #1B74E4;
+}

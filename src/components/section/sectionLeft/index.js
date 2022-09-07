@@ -79,22 +79,24 @@ const SectionLeft = () => {
         },
     ]
     return (
-        <>
-            <div className="d-flex flex-column justify-content-start mt-3">
-                <div className="d-flex align-items-center">
-                    <img height="28" width="28" alt="profile" className="rounded-circle m-2" src={userDummyApi.user.profile_picture} />
-                    <span className="fw-semibold">{userDummyApi.user.name}</span>
+        <div className="navbar navbar-expand-md p-0">
+            <div className="collapse navbar-collapse"  id="navbarSupportedContent">
+                <div className="d-flex flex-column justify-content-start mt-3 navbar-nav">
+                    <div className="d-flex align-items-center">
+                        <img height="28" width="28" alt="profile" className="rounded-circle m-2" src={userDummyApi.user.profile_picture} />
+                        <span className="ms-3 ms-md-0 fw-semibold">{userDummyApi.user.name}</span>
+                    </div>
+                    {menuItem.map((item, index) => {
+                        return (
+                            <div key={index} className="d-flex align-items-center">
+                                <img height="28" width="28" alt="profile" className="rounded-circle m-2" src={item.imgSrc} />
+                                <span className="ms-3 ms-md-0 fw-semibold">{item.menuText}</span>
+                            </div>
+                        )
+                    })}
                 </div>
-                {menuItem.map((item, index) => {
-                    return (
-                        <div key={index} className="d-flex align-items-center">
-                            <img height="28" width="28" alt="profile" className="rounded-circle m-2" src={item.imgSrc} />
-                            <span className="fw-semibold">{item.menuText}</span>
-                        </div>
-                    )
-                })}
             </div>
-        </>
+        </div>
     )
 }
 export default SectionLeft
